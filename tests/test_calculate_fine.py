@@ -2,7 +2,7 @@ from src.library_fine import calculate_fine
 import pytest
 
 @pytest.mark.parametrize(
-    "overdue_days, expected",
+    "overdue_days, fine",
     [
         (0, 0),
         (1, 50),
@@ -11,8 +11,8 @@ import pytest
         (11, 500),
     ],
 )
-def test_calculate_fine(overdue_days, expected):
-    assert calculate_fine(overdue_days) == expected
+def test_calculate_fine(overdue_days, fine):
+    assert calculate_fine(overdue_days) == fine
 
 def test_negative_days():
     with pytest.raises(ValueError):

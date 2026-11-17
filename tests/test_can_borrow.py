@@ -33,8 +33,12 @@ def test_value_error(active_loans, overdue_books):
 @pytest.mark.parametrize(
     "active_loans, overdue_books",
     [
-        ("3", 0), 
-        (3, "0")
+        ("3", 0),
+        (3, "0"),
+        (3.0, 0),
+        (3, 0.0),
+        (True, 0),
+        (3, False),
         ],
 )
 def test_type_error(active_loans, overdue_books):
