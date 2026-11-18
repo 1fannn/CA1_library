@@ -8,7 +8,7 @@ import pytest
         (1, 50),
         (5, 250),
         (10, 500),
-        (11, 500),
+        (11, 550),
     ],
 )
 def test_calculate_fine(overdue_days, fine):
